@@ -1,47 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+
     <style>
         body {
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
-            max-width: 700px;
-            margin: 40px auto;
-            padding: 0 20px;
-            line-height: 1.6;
+            background-image: url('https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?semt=ais_hybrid&w=740&q=80');
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(2px);
+            color: #fff;
         }
-        h1 {
-            color: #222;
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.55);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
         }
-        a.button {
-            display: inline-block;
-            padding: 12px 20px;
-            background: #007bff;
-            color: white;
+
+        .container {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+            align-items: center;
+            padding: 0 50px;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile {
+            flex: 1;
+        }
+
+        .profile img {
+            width: 260px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+            animation: slideIn 1s ease-out;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .content {
+            flex: 2;
+            padding-left: 40px;
+        }
+
+        .content h1 {
+            font-size: 38px;
+            margin-bottom: 10px;
+            animation: fadeIn 1.4s ease-in-out;
+        }
+
+        .content p {
+            max-width: 550px;
+            font-size: 18px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            animation: fadeIn 1.6s ease-in-out;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .buttons a {
             text-decoration: none;
-            border-radius: 6px;
-            margin-top: 10px;
+            padding: 12px 24px;
+            background: rgba(255,255,255,0.15);
+            border: 2px solid rgba(255,255,255,0.4);
+            color: #fff;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: 0.3s;
+            backdrop-filter: blur(4px);
+            animation: fadeIn 1.8s ease-in-out;
         }
-        a.button:hover {
-            background: #005fcc;
+
+        .buttons a:hover {
+            background: rgba(255,255,255,0.3);
+            border-color: #fff;
         }
     </style>
 </head>
+
 <body>
 
-    <h1>Welcome to My Website</h1>
-    <p>This is my personal site where I'll put my projects, tools, and downloads.</p>
+<div class="overlay"></div>
 
-    <h2>What’s Coming Soon</h2>
-    <ul>
-        <li>My custom ChatGPT project</li>
-        <li>Chrome extension download</li>
-        <li>Live chatbot you can use on the site</li>
-        <li>Resume + portfolio</li>
-    </ul>
+<div class="container">
+    <div class="profile">
+        <img src="https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?semt=ais_hybrid&w=740&q=80" alt="Profile">
+    </div>
 
-    <p>Check back soon — more updates coming!</p>
+    <div class="content">
+        <h1>Your Name</h1>
+        <p>
+            Write a short intro about yourself here. Maybe what you study, what you build,
+            what you're into, or what you're working on right now. Keep it simple but personal.
+        </p>
+
+        <div class="buttons">
+            <a href="assets/resume.pdf" target="_blank">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
