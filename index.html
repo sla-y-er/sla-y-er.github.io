@@ -1,176 +1,161 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #0e1624, #111a2e);
-      color: #fff;
-    }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mohammad Farrah — Portfolio</title>
 
-    /* Navbar */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      padding: 20px 40px;
-      background: rgba(14, 22, 36, 0.85);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      backdrop-filter: blur(10px);
-      z-index: 1000;
-    }
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-    .navbar-title {
-      font-size: 24px;
-      font-weight: 700;
-      color: #94c0ff;
-    }
-
-    .navbar-links a {
-      margin-left: 25px;
-      text-decoration: none;
-      color: #d7e3ff;
-      font-size: 17px;
-      transition: 0.2s;
-    }
-
-    .navbar-links a:hover {
-      color: #a8c7ff;
-    }
-
-    /* Hero Section */
-    .hero {
-      display: flex;
-      align-items: center;
-      padding: 140px 80px 100px;
-      gap: 60px;
-    }
-
-    .hero img {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      border: 6px solid #2f75ff;
-      object-fit: cover;
-    }
-
-    .hero-text h1 {
-      font-size: 42px;
-      margin: 0;
-    }
-
-    .hero-text h2 {
-      font-size: 26px;
-      font-weight: 400;
-      color: #9bb8ff;
-    }
-
-    .hero-text p {
-      margin-top: 15px;
-      line-height: 1.6;
-      max-width: 550px;
-    }
-
-    /* Sections */
-    section {
-      padding: 80px;
-    }
-
-    h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .project-card {
-      background: #1b263b;
-      padding: 20px;
-      border-radius: 14px;
-      border: 1px solid #2e3b55;
-    }
-
-    .project-card h3 {
-      margin-top: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <div class="navbar">
-    <div class="navbar-title">Portfolio</div>
-    <div class="navbar-links">
+  <header class="nav">
+    <div class="nav-left">
+      <div class="logo">Mohammad <span>Farrah</span></div>
+    </div>
+    <nav class="nav-right">
       <a href="#home">Home</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#experience">Experience</a>
-    </div>
-  </div>
+      <a class="cta" id="resume-btn" href="#" target="_blank">View full résumé</a>
+    </nav>
+    <button id="mobile-toggle" aria-label="menu">☰</button>
+  </header>
 
-  <!-- Hero Section -->
-  <div id="home" class="hero">
-    <img src="https://via.placeholder.com/220" alt="profile" />
-    <div class="hero-text">
-      <h1>Mohammad Farrah</h1>
-      <h2>Full-Stack & Embedded Software Engineer</h2>
-      <p>
-        I build scalable, practical, and clean software — everything from web apps
-        to low-level microcontroller projects.
-      </p>
-      <p>
-        I’m also passionate about embedded systems, writing firmware, and bringing
-        hardware to life through efficient embedded design.
-      </p>
-    </div>
-  </div>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Top Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3>Mini Chatbot Chrome Extension</h3>
-        <p>A lightweight Chrome extension assistant with quick AI replies.</p>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-left">
+        <img class="avatar" src="https://via.placeholder.com/320" alt="profile photo">
       </div>
-      <div class="project-card">
-        <h3>Project 2</h3>
-        <p>Coming soon...</p>
-      </div>
-      <div class="project-card">
-        <h3>Project 3</h3>
-        <p>Coming soon...</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <p style="text-align:center; max-width:700px; margin:auto; line-height:1.7;">
-      JavaScript, TypeScript, React, Node.js, Python, C, C++, Microcontrollers,
-      ESP32, AVR, STM32, SQL, Git, REST APIs, Cloud basics
-    </p>
-  </section>
+      <div class="hero-right">
+        <h1>Mohammad <strong>Farrah</strong></h1>
+        <h2>Full-Stack & Embedded Software Engineer</h2>
+        <p class="lead">
+          I build practical systems — from web apps to embedded firmware. I focus on clean code,
+          reliable systems, and bridging software with hardware.
+        </p>
 
-  <!-- Experience -->
-  <section id="experience">
-    <h2>Experience</h2>
-    <p style="text-align:center; max-width:700px; margin:auto; line-height:1.7;">
-      Experience section placeholder. Add internships, personal work, or anything
-      you want.
-    </p>
-  </section>
+        <div class="hero-actions">
+          <a class="download" id="download-ext" href="#" download>Download MiniChatbot</a>
+          <a class="contact" href="#projects">See projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <h3 class="section-title">Top Projects</h3>
+      <div class="projects-grid">
+        <article class="card fade-in">
+          <div class="card-title">Mini Chatbot — Chrome Extension</div>
+          <p>Lightweight Chrome extension with local Python backend support. Demo & download available.</p>
+          <div class="card-actions">
+            <a href="#" class="btn" id="project-demo">Demo</a>
+            <a href="#" class="btn outline" id="project-code">Code</a>
+          </div>
+        </article>
+
+        <article class="card fade-in">
+          <div class="card-title">Project 2</div>
+          <p>Coming soon — placeholder for next project.</p>
+          <div class="card-actions">
+            <a href="#" class="btn outline">Details</a>
+          </div>
+        </article>
+
+        <article class="card fade-in">
+          <div class="card-title">Project 3</div>
+          <p>Coming soon — placeholder for next project.</p>
+          <div class="card-actions">
+            <a href="#" class="btn outline">Details</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <h3 class="section-title">Technical Skills</h3>
+      <p class="center muted">Hover icons to highlight. They animate into view as you scroll.</p>
+
+      <div class="skills-grid">
+        <!-- Simple svg / label combos so you don't need external icon packs -->
+        <div class="skill" data-skill="JavaScript">
+          <div class="skill-icon">JS</div>
+          <div class="skill-label">JavaScript</div>
+        </div>
+
+        <div class="skill" data-skill="Python">
+          <div class="skill-icon">Py</div>
+          <div class="skill-label">Python</div>
+        </div>
+
+        <div class="skill" data-skill="C/C++">
+          <div class="skill-icon">C</div>
+          <div class="skill-label">C / C++</div>
+        </div>
+
+        <div class="skill" data-skill="Node">
+          <div class="skill-icon">ND</div>
+          <div class="skill-label">Node.js</div>
+        </div>
+
+        <div class="skill" data-skill="Embedded">
+          <div class="skill-icon">MCU</div>
+          <div class="skill-label">Embedded (ESP / STM)</div>
+        </div>
+
+        <div class="skill" data-skill="Git">
+          <div class="skill-icon">GH</div>
+          <div class="skill-label">Git</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <h3 class="section-title">Experience</h3>
+      <p class="center muted">Timeline — I started in <strong>2025</strong> and growing since.</p>
+
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <!-- Timeline nodes -->
+        <div class="timeline-node" style="left:6%">
+          <div class="node-year">2025</div>
+          <div class="node-card">Began personal projects and embedded work</div>
+        </div>
+
+        <div class="timeline-node" style="left:40%">
+          <div class="node-year">2026</div>
+          <div class="node-card">First public projects & internships</div>
+        </div>
+
+        <div class="timeline-node" style="left:72%">
+          <div class="node-year">2027</div>
+          <div class="node-card">Scaling projects & production-ready builds</div>
+        </div>
+      </div>
+
+      <div class="view-resume">
+        <a id="view-resume" href="#" class="btn">View full résumé</a>
+      </div>
+    </section>
+
+    <footer class="site-foot">
+      <div>© <span id="year"></span> Mohammad Farrah</div>
+      <div class="socials">
+        <a href="#" aria-label="GitHub">GH</a>
+        <a href="#" aria-label="LinkedIn">in</a>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
