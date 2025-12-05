@@ -1,161 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mohammad Farrah — Portfolio</title>
-
-  <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ali Arsalan Wafaee • Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="nav">
-    <div class="nav-left">
-      <div class="logo">Mohammad <span>Farrah</span></div>
-    </div>
-    <nav class="nav-right">
-      <a href="#home">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a class="cta" id="resume-btn" href="#" target="_blank">View full résumé</a>
-    </nav>
-    <button id="mobile-toggle" aria-label="menu">☰</button>
-  </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="hero-left">
-        <img class="avatar" src="https://via.placeholder.com/320" alt="profile photo">
-      </div>
+    <!-- Corner Accent -->
+    <div class="corner top-left"></div>
+    <div class="corner bottom-right"></div>
 
-      <div class="hero-right">
-        <h1>Mohammad <strong>Farrah</strong></h1>
-        <h2>Full-Stack & Embedded Software Engineer</h2>
-        <p class="lead">
-          I build practical systems — from web apps to embedded firmware. I focus on clean code,
-          reliable systems, and bridging software with hardware.
+    <header class="nav">
+        <div class="logo">A A W</div>
+
+        <div class="icons">
+            <a href="#" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></a>
+            <a href="#" title="Email"><img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/new-post.png"></a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome.</h1>
+
+        <p class="bio">
+            I’m Ali Arsalan Wafaee, a full-stack software engineer with experience in embedded
+            systems and research. I love building clean, functional interfaces and designing
+            systems that merge hardware and software seamlessly.
         </p>
 
-        <div class="hero-actions">
-          <a class="download" id="download-ext" href="#" download>Download MiniChatbot</a>
-          <a class="contact" href="#projects">See projects</a>
-        </div>
-      </div>
+        <p class="bio">
+            I work on full-stack web apps, microcontroller projects, automation tools,
+            and anything that pushes my skills further.
+        </p>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <h3 class="section-title">Top Projects</h3>
-      <div class="projects-grid">
-        <article class="card fade-in">
-          <div class="card-title">Mini Chatbot — Chrome Extension</div>
-          <p>Lightweight Chrome extension with local Python backend support. Demo & download available.</p>
-          <div class="card-actions">
-            <a href="#" class="btn" id="project-demo">Demo</a>
-            <a href="#" class="btn outline" id="project-code">Code</a>
-          </div>
-        </article>
 
-        <article class="card fade-in">
-          <div class="card-title">Project 2</div>
-          <p>Coming soon — placeholder for next project.</p>
-          <div class="card-actions">
-            <a href="#" class="btn outline">Details</a>
-          </div>
-        </article>
+    <section class="projects">
+        <h2>Projects</h2>
 
-        <article class="card fade-in">
-          <div class="card-title">Project 3</div>
-          <p>Coming soon — placeholder for next project.</p>
-          <div class="card-actions">
-            <a href="#" class="btn outline">Details</a>
-          </div>
-        </article>
-      </div>
+        <div class="project-list">
+            <a class="project-item" href="#">Mini Chatbot</a>
+            <a class="project-item" href="#">Craps Game (Java GUI)</a>
+            <a class="project-item" href="#">Electromagnetic Launcher</a>
+
+            <a class="project-item coming-soon">More coming soon…</a>
+        </div>
     </section>
 
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-      <h3 class="section-title">Technical Skills</h3>
-      <p class="center muted">Hover icons to highlight. They animate into view as you scroll.</p>
 
-      <div class="skills-grid">
-        <!-- Simple svg / label combos so you don't need external icon packs -->
-        <div class="skill" data-skill="JavaScript">
-          <div class="skill-icon">JS</div>
-          <div class="skill-label">JavaScript</div>
-        </div>
+    <section class="experience">
+        <h2>Experience</h2>
 
-        <div class="skill" data-skill="Python">
-          <div class="skill-icon">Py</div>
-          <div class="skill-label">Python</div>
-        </div>
+        <div class="timeline">
 
-        <div class="skill" data-skill="C/C++">
-          <div class="skill-icon">C</div>
-          <div class="skill-label">C / C++</div>
-        </div>
+            <div class="entry">
+                <div class="year">2025</div>
+                <div class="desc">Full-Stack Software Engineering Internship</div>
+            </div>
 
-        <div class="skill" data-skill="Node">
-          <div class="skill-icon">ND</div>
-          <div class="skill-label">Node.js</div>
-        </div>
+            <div class="entry">
+                <div class="year">2025</div>
+                <div class="desc">Research Assistant (RA)</div>
+            </div>
 
-        <div class="skill" data-skill="Embedded">
-          <div class="skill-icon">MCU</div>
-          <div class="skill-label">Embedded (ESP / STM)</div>
-        </div>
+            <div class="entry">
+                <div class="year">2026</div>
+                <div class="desc">Coming soon</div>
+            </div>
 
-        <div class="skill" data-skill="Git">
-          <div class="skill-icon">GH</div>
-          <div class="skill-label">Git</div>
         </div>
-      </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section">
-      <h3 class="section-title">Experience</h3>
-      <p class="center muted">Timeline — I started in <strong>2025</strong> and growing since.</p>
-
-      <div class="timeline">
-        <div class="timeline-line"></div>
-
-        <!-- Timeline nodes -->
-        <div class="timeline-node" style="left:6%">
-          <div class="node-year">2025</div>
-          <div class="node-card">Began personal projects and embedded work</div>
-        </div>
-
-        <div class="timeline-node" style="left:40%">
-          <div class="node-year">2026</div>
-          <div class="node-card">First public projects & internships</div>
-        </div>
-
-        <div class="timeline-node" style="left:72%">
-          <div class="node-year">2027</div>
-          <div class="node-card">Scaling projects & production-ready builds</div>
-        </div>
-      </div>
-
-      <div class="view-resume">
-        <a id="view-resume" href="#" class="btn">View full résumé</a>
-      </div>
-    </section>
-
-    <footer class="site-foot">
-      <div>© <span id="year"></span> Mohammad Farrah</div>
-      <div class="socials">
-        <a href="#" aria-label="GitHub">GH</a>
-        <a href="#" aria-label="LinkedIn">in</a>
-      </div>
+    <footer class="footer">
+        © 2025 • Ali Arsalan Wafaee • All Rights Reserved
     </footer>
-  </main>
 
-  <script src="script.js"></script>
 </body>
 </html>
