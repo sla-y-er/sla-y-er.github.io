@@ -1,133 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ali Arsalan Wafaee</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #0e1624, #111a2e);
+      color: #fff;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-image: url('https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?semt=ais_hybrid&w=740&q=80');
-            background-size: cover;
-            background-position: center;
-            backdrop-filter: blur(2px);
-            color: #fff;
-        }
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px 40px;
+      background: rgba(14, 22, 36, 0.85);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+    }
 
-        .overlay {
-            background: rgba(0, 0, 0, 0.55);
-            width: 100%;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-        }
+    .navbar-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #94c0ff;
+    }
 
-        .container {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-direction: row;
-            height: 100vh;
-            align-items: center;
-            padding: 0 50px;
-            animation: fadeIn 1.2s ease-in-out;
-        }
+    .navbar-links a {
+      margin-left: 25px;
+      text-decoration: none;
+      color: #d7e3ff;
+      font-size: 17px;
+      transition: 0.2s;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    .navbar-links a:hover {
+      color: #a8c7ff;
+    }
 
-        .profile {
-            flex: 1;
-        }
+    /* Hero Section */
+    .hero {
+      display: flex;
+      align-items: center;
+      padding: 140px 80px 100px;
+      gap: 60px;
+    }
 
-        .profile img {
-            width: 260px;
-            height: auto;
-            border-radius: 12px;
-            box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
-            animation: slideIn 1s ease-out;
-        }
+    .hero img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 6px solid #2f75ff;
+      object-fit: cover;
+    }
 
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateX(-40px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
+    .hero-text h1 {
+      font-size: 42px;
+      margin: 0;
+    }
 
-        .content {
-            flex: 2;
-            padding-left: 40px;
-        }
+    .hero-text h2 {
+      font-size: 26px;
+      font-weight: 400;
+      color: #9bb8ff;
+    }
 
-        .content h1 {
-            font-size: 38px;
-            margin-bottom: 10px;
-            animation: fadeIn 1.4s ease-in-out;
-        }
+    .hero-text p {
+      margin-top: 15px;
+      line-height: 1.6;
+      max-width: 550px;
+    }
 
-        .content p {
-            max-width: 550px;
-            font-size: 18px;
-            line-height: 1.5;
-            margin-bottom: 30px;
-            animation: fadeIn 1.6s ease-in-out;
-        }
+    /* Sections */
+    section {
+      padding: 80px;
+    }
 
-        .buttons {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
 
-        .buttons a {
-            text-decoration: none;
-            padding: 12px 24px;
-            background: rgba(255,255,255,0.15);
-            border: 2px solid rgba(255,255,255,0.4);
-            color: #fff;
-            border-radius: 8px;
-            font-size: 18px;
-            transition: 0.3s;
-            backdrop-filter: blur(4px);
-            animation: fadeIn 1.8s ease-in-out;
-        }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
 
-        .buttons a:hover {
-            background: rgba(255,255,255,0.3);
-            border-color: #fff;
-        }
-    </style>
+    .project-card {
+      background: #1b263b;
+      padding: 20px;
+      border-radius: 14px;
+      border: 1px solid #2e3b55;
+    }
+
+    .project-card h3 {
+      margin-top: 0;
+    }
+  </style>
 </head>
-
 <body>
-
-<div class="overlay"></div>
-
-<div class="container">
-    <div class="profile">
-        <img src="https://media.licdn.com/dms/image/v2/D5603AQFUMkX3t_jlHA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719720115017?e=1766016000&v=beta&t=znNe9B_PXgGTf_YALVymKPF5hKfr6T3YYMRIvgwVM3c">
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="navbar-title">Portfolio</div>
+    <div class="navbar-links">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
     </div>
+  </div>
 
-    <div class="content">
-        <h1>Ali Arsalan Wafaee</h1>
-        <p>
-            I’m a junior at UW Tacoma studying Computer Science and Computer Engineering.
-            I’m a research assistant on a project that’s growing into a paper, and I spend a lot of time with the IEEE group on campus.
-            I like to build small projects, you can check out some of them yourself.
-        </p>
-
-        <div class="buttons">
-            <a href="assets/Ali_resume.pdf" target="_blank">Resume</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact Me</a>
-        </div>
+  <!-- Hero Section -->
+  <div id="home" class="hero">
+    <img src="https://via.placeholder.com/220" alt="profile" />
+    <div class="hero-text">
+      <h1>Mohammad Farrah</h1>
+      <h2>Full-Stack & Embedded Software Engineer</h2>
+      <p>
+        I build scalable, practical, and clean software — everything from web apps
+        to low-level microcontroller projects.
+      </p>
+      <p>
+        I’m also passionate about embedded systems, writing firmware, and bringing
+        hardware to life through efficient embedded design.
+      </p>
     </div>
-</div>
+  </div>
 
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Top Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Mini Chatbot Chrome Extension</h3>
+        <p>A lightweight Chrome extension assistant with quick AI replies.</p>
+      </div>
+      <div class="project-card">
+        <h3>Project 2</h3>
+        <p>Coming soon...</p>
+      </div>
+      <div class="project-card">
+        <h3>Project 3</h3>
+        <p>Coming soon...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <p style="text-align:center; max-width:700px; margin:auto; line-height:1.7;">
+      JavaScript, TypeScript, React, Node.js, Python, C, C++, Microcontrollers,
+      ESP32, AVR, STM32, SQL, Git, REST APIs, Cloud basics
+    </p>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <p style="text-align:center; max-width:700px; margin:auto; line-height:1.7;">
+      Experience section placeholder. Add internships, personal work, or anything
+      you want.
+    </p>
+  </section>
 </body>
 </html>
