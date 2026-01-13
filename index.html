@@ -1,81 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ali Arsalan Wafaee • Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <title>Quienten Miller | Software Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="container">
+    <!-- LEFT SIDE -->
+    <aside class="sidebar">
+      <h1>Quienten Miller</h1>
+      <p class="subtitle">Software Engineer</p>
 
-    <!-- Corner Accent -->
-    <div class="corner top-left"></div>
-    <div class="corner bottom-right"></div>
+      <nav>
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#experience">EXPERIENCE</a>
+      </nav>
 
-    <header class="nav">
-        <div class="logo">A A W</div>
+      <div class="socials">
+        <a href="#">GitHub</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Email</a>
+      </div>
+    </aside>
 
-        <div class="icons">
-            <a href="#" title="GitHub"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></a>
-            <a href="#" title="Email"><img src="https://img.icons8.com/ios-glyphs/30/FFFFFF/new-post.png"></a>
-        </div>
-    </header>
-
-    <section class="hero">
-        <h1>Welcome.</h1>
-
-        <p class="bio">
-            I’m Ali Arsalan Wafaee, a full-stack software engineer with experience in embedded
-            systems and research. I love building clean, functional interfaces and designing
-            systems that merge hardware and software seamlessly.
+    <!-- RIGHT SIDE -->
+    <main class="content">
+      <section id="about">
+        <p class="intro">
+          My name is Quienten, and I'm an aspiring Software Engineer studying at the
+          University of Washington Tacoma. With internship experience in full-stack
+          development, I enjoy building clean, practical software and constantly leveling up.
         </p>
+      </section>
 
-        <p class="bio">
-            I work on full-stack web apps, microcontroller projects, automation tools,
-            and anything that pushes my skills further.
-        </p>
-    </section>
-
-
-    <section class="projects">
-        <h2>Projects</h2>
-
-        <div class="project-list">
-            <a class="project-item" href="#">Mini Chatbot</a>
-            <a class="project-item" href="#">Craps Game (Java GUI)</a>
-            <a class="project-item" href="#">Electromagnetic Launcher</a>
-
-            <a class="project-item coming-soon">More coming soon…</a>
+      <section id="projects" class="projects">
+        <div class="project-card">
+          <img src="https://placehold.co/120x120" />
+          <div>
+            <h3>
+              Soy Much Sushi <span>↗</span>
+            </h3>
+            <p class="muted">Run your own sushi restaurant and make tons of money.</p>
+            <p class="muted">Built in a 10-week UW game dev course.</p>
+            <div class="tags">
+              <span>JavaScript</span>
+              <span>Game</span>
+            </div>
+          </div>
         </div>
-    </section>
 
-
-    <section class="experience">
-        <h2>Experience</h2>
-
-        <div class="timeline">
-
-            <div class="entry">
-                <div class="year">2025</div>
-                <div class="desc">Full-Stack Software Engineering Internship</div>
+        <div class="project-card">
+          <img src="https://placehold.co/120x120" />
+          <div>
+            <h3>
+              2048 <span>↗</span>
+            </h3>
+            <p class="muted">A weekend recreation of the classic web game.</p>
+            <div class="tags">
+              <span>JavaScript</span>
+              <span>Game</span>
             </div>
-
-            <div class="entry">
-                <div class="year">2025</div>
-                <div class="desc">Research Assistant (RA)</div>
-            </div>
-
-            <div class="entry">
-                <div class="year">2026</div>
-                <div class="desc">Coming soon</div>
-            </div>
-
+          </div>
         </div>
-    </section>
-
-    <footer class="footer">
-        © 2025 • Ali Arsalan Wafaee • All Rights Reserved
-    </footer>
-
+      </section>
+    </main>
+  </div>
 </body>
 </html>
+
